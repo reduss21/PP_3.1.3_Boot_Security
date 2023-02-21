@@ -40,10 +40,7 @@ public class UserServiceImpl implements UserService {
         return user.orElse(null);
     }
 
-    @Override
-    public List<Roles> getListRoles() {
-        return roleRepository.findAll();
-    }
+
 
     @Override
     @Transactional
@@ -52,11 +49,6 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
     }
 
-    @Override
-    @Transactional
-    public void addRoles(Roles role) {
-        roleRepository.save(role);
-    }
 
     @Override
     @Transactional
